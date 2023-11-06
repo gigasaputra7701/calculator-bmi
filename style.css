@@ -1,6 +1,20 @@
+*{
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,900&display=swap');
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    width:40%;
+    margin:auto;
+}
+header p {
+    text-align:justify;
+    letter-spacing: 0.5px;
+    /* text-indent: 50px; */
+}
+
 .container{
     width:40%;
-    height:300px;
     display:flex;
     justify-content:center;
     align-items:flex-start;
@@ -8,8 +22,17 @@
     background-color:#dedede;
     margin:auto;
     padding:10px;
-    gap:20px;
     border-radius:10px;
+}
+.container .gender-group{
+    display:flex;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.container .gender-group .gender{
+    font-size:1.1rem;
+    font-weight:600;
 }
 .container .title{
     font-size:1.5rem;
@@ -19,20 +42,107 @@
 }
 
 .container span{
-    font-size:1.5rem;
+    font-size:1.1rem;
+    font-weight:600;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.container .gender-title{
+    font-size:1.1rem;
     font-weight:600;
 }
 .container input{
     width: 98%;
-    height:20px;
+    height:30px;
     margin-right:10px;
 }
 
-.container .submit{
+.container .btn-group{
+    display:flex;
     width:100%;
-    height:30px;
+    gap:10px;
+}
+
+
+.container .submit{
+    margin-top:20px;
+    font-size:1.1rem;
+    width:22%;
+    height:40px;
     color:white;
-    padding:5px;
-    background-color:blue;
+    box-sizing: border-box;
+    background-color:#2D76F6;
+    border-radius:5px;
+}
+
+.container .reset{
+    margin-top:20px;
+    font-size:1.1rem;
+    width:12%;
+    height:40px;
+    color:black;
+    box-sizing: border-box;
+    background-color:white;
+    border-radius:5px;
+}
+
+.btn-primary, .btn-print{
+    background-color:#2D76F6;
+    color:white;
+    border-radius:5px;
+    padding:10px;
+}
+
+.container2{
+    width:40%;
+    margin:auto;
+}
+.container-hasil{
+    width:40%;
+    margin:auto;
+}
+.container-2 .btn-group{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+.container-2 .btn-group .btn-primary-2{
+    background-color:#2D76F6;
+    color:white;
+    border-radius:5px;
+    padding:10px;
+}
+.container-3, .container-1{
+    width:60%;
+    height:250px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background-color:#dedede;
+    margin:auto;
+    padding:10px;
     border-radius:10px;
 }
+.container-3 .content{
+    text-align:center;
+
+}
+.container-3 ul{
+    padding-right:30px;
+    display:flex;
+    flex-direction:column;
+    list-style-type:none;
+    text-align:center;
+}
+.container-3 .btn-group{
+    display:flex;
+    margin-top:10px;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    gap:10px;
+    height:30px;
+}
+
