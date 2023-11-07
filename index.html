@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalkulator BMI | Giga</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -13,29 +14,31 @@
         menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.
       </p>
     </header>
+
     <!-- Form -->
-    <form id="form-calculator">
+    <form id="form">
       <div class="container">
          <span class="gender-title">Jenis Kelamin</span>
          <div class="gender-group">
-           <input type="radio" id="Laki-laki" name="gender" value="Laki-laki">
+           <input type="radio" id="Laki-laki" name="gender" value="Pria">
            <label for="Laki-laki" class="gender">Pria</label>
-           <input type="radio" id="Perempuan" name="gender" value="Perempuan">
+           <input type="radio" id="Perempuan" name="gender" value="Wanita">
            <label for="Perempuan" class="gender">Wanita</label>
          </div>
          <span>Berat Badan (kg)</span>
-         <input type="number" placeholder="Input here" id="weight"></input>
+         <input type="number" placeholder="Input here" id="weight" name="weight"></input>
          <span>Usia (tahun)</span>
-         <input type="number" placeholder="Input here" id="age"></input>
-         <span>Tinggi Badan (cm)</span>
-         <input type="number" placeholder="Input here" id="height"></input>
+         <input type="number" placeholder="Input here" id="age" name="age"></input>
+         <span>Tinggi Badan (m)</span>
+         <input type="number" placeholder="Input here" id="height" name="height"></input>
          <span class="result"></span>
          <div class="btn-group">
-           <button class="submit">Hitung BMI</button>
-           <button class="reset" id="reset-btn">Reset</button>
+           <button onclick="hitungBmi()" class="submit">Hitung BMI</button>
+           <button onclick="reload()" class="reset" id="reset-btn">Reset</button>
          </div>
       </div>
     </form>
+
      <!-- Keunggulan Fitur -->
      <div class="container2">
       <h1>Keunggulan fitur</h1>
@@ -49,16 +52,20 @@
      </div>
 
     <!-- Hasil -->
-     <div class="container-hasil">
+    <div class="container-hasil">
       <h1>Hasil</h1>
-      <div class="container-1">
+
+      <div class="container-1" id="container-1">
        <h1>Berat Badan</h1>
-       <h2></h2>
-       <p>Anda memiliki berat badan</p>
-       <button class="btn-print">Download Hasil BMI</button>
+       <h2 class="hasil-bmi"></h2>
+       <p>Anda memiliki berat badan
+          <span class="desc-hasil"></span>
+       </p>
+       <button class="btn-print" id="btn-print" onclick="printTextBox()">Download Hasil BMI</button>
       </div>
+
       <div class="container-2">
-         <p></p>
+         <p class="desc-bmi"></p>
          <div class="btn-group">
            <button class="btn-primary-2">Konsultasi Ahli Gizi Via Aplikasi</button>
            <button class="btn-primary-2">Registrasi Online Ahli Gizi</button>
@@ -69,14 +76,9 @@
          </p>
       </div>
  
-      <div class="container-3">
-         <h1 class="content">Beberapa penyakit yang berasal dari kegemukan</h1>
-         <ul>
-           <li>Diabetes</li>
-           <li>Hipertensi</li>
-           <li>Sakit Jantung</li>
-           <li>Osteoarhritis</li>
-         </ul>
+      <div class="container-3" id="container-penyakit">
+         <h1 class="content"></h1>
+         <ul class="list-penyakit" id="list"></ul>
          <div class="btn-group">
            <button class="btn-primary">Konsultasi Ahli Gizi Via Aplikasi</button>
            <button class="btn-primary">Registrasi Online Sekarang</button>
@@ -84,4 +86,5 @@
       </div>
      </div>
   </body>
+  <script src="script.js"></script>
 </html>
