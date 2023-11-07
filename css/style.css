@@ -108,9 +108,10 @@ header p {
     letter-spacing: 0.5px;
 }
 .container-hasil{
-    /* visibility: hidden; */
+    display:none;
     width:40%;
     margin:auto;
+    padding:20px;
 }
 .container-2{
     text-align:justify;
@@ -128,9 +129,9 @@ header p {
     border-radius:5px;
     padding:10px;
 }
+
 .container-3, .container-1{
-    width:60%;
-    height:250px;
+    width:80%;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -159,5 +160,6 @@ header p {
     width:100%;
     gap:10px;
     height:30px;
+    margin-bottom:10px;
 }
 
