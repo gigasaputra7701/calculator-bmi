@@ -98,6 +98,14 @@ header p {
     border-radius:5px;
     padding:10px;
 }
+.btn-primary a{
+    text-decoration:none;
+    color:white;
+}
+.btn-primary-2 a{
+    text-decoration:none;
+    color:white;
+}
 
 .container2{
     width:40%;
@@ -140,6 +148,10 @@ header p {
     margin:auto;
     padding:10px;
     border-radius:10px;
+    
+}
+.container-3{
+    display:none;
 }
 .container-3 .content{
     text-align:center;
