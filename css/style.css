@@ -147,6 +147,7 @@ header p {
 .container2{
     width:40%;
     margin:auto;
+    padding:10px;
 }
 .container2 p{
     text-align:justify;
@@ -220,5 +221,28 @@ header p {
     height:30px;
     margin-top:30x;
     margin-bottom:10px;
+}
+
+/* Phone */
+@media only screen and (max-width:320px){
+    header{
+        width:80%;
+    }
+    .container{
+        width:80%;
+        margin:10px;
+    }
+    .container2{
+        width:80%;
+    }
+    .container-hasil{
+        width:80%;
+    }
+    .container-hasil .container-1{
+        width:80%;
+    }
+    .container-3 .btn-group .btn-primary{
+        width:100%;
+    }
 }
 

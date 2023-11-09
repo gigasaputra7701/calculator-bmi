@@ -1,5 +1,6 @@
 
 //function hitung BMI
+// bug input number with decimal
 function hitungBmi(){
     
     let pBmi = document.querySelector('.hasil-bmi');
@@ -17,11 +18,10 @@ function hitungBmi(){
     let list = document.getElementById("list");
     list.innerHTML = "";   
 
-    console.log(gender);
     if(gender == 'Pria' || gender == 'Wanita'){
 
         if(weight>0 && age>0 && height>0){
-    
+
             document.getElementById("container-hasil").style.display = "block"; 
             let bmi = weight/(Math.pow(height, 2));
             pBmi.textContent = `${bmi.toFixed(2)}`; 
