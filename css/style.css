@@ -2,13 +2,24 @@
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,900&display=swap');
     font-family: 'Roboto', sans-serif;
 }
+:root {
+    --blue: #0060E5;
+    --grey: #2D3440;
+    --bg: #161A20;
+    --hover2: #575D66;
+    --hover: #2E7BE5;
+  }
+
 body{
     height:100vh;
+    color:white;
+    background:black;
 }
 
 header{
     width:40%;
     margin:auto;
+    margin-bottom:20px;
 }
 header p {
     text-align:justify;
@@ -25,9 +36,10 @@ header p {
     justify-content:center;
     align-items:flex-start;
     flex-direction:column;
-    background-color:#dedede;
+    background-color: var(--bg);
     margin:auto;
-    padding:10px;
+    padding:20px;
+    padding-right:25px;
     border-radius:10px;
 }
 .container .gender-group{
@@ -60,7 +72,13 @@ header p {
 .container input{
     width: 98%;
     height:30px;
+    font-size:1.1rem;
     margin-right:10px;
+    border-radius:5px;
+    padding:5px;
+    padding-left:10px;
+    color:var(--grey);
+    border:none;
 }
 
 .container .btn-group{
@@ -69,34 +87,53 @@ header p {
     gap:10px;
 }
 
-
 .container .submit{
     margin-top:20px;
     font-size:1.1rem;
-    width:22%;
     height:40px;
     color:white;
     box-sizing: border-box;
-    background-color:#2D76F6;
+    background-color: var(--blue);
     border-radius:5px;
+    padding:10px;
+    border:none;
+}
+.container .submit:hover {
+    transition:ease-in-out 300ms;
+    background-color: var(--hover);
 }
 
 .container .reset{
     margin-top:20px;
     font-size:1.1rem;
-    width:12%;
+    padding:10px;
     height:40px;
     color:black;
     box-sizing: border-box;
-    background-color:white;
+    background-color: var(--grey);
+    color:white;
     border-radius:5px;
+    border:none;
+}
+.container .reset:hover{
+    transition:ease-in-out 300ms;
+    background-color: var(--hover2);
 }
 
 .btn-primary, .btn-print{
-    background-color:#2D76F6;
+    background-color:var(--blue);
     color:white;
     border-radius:5px;
     padding:10px;
+    border:none;
+}
+.btn-print:hover{
+    transition:ease-in-out 300ms;
+    background-color: var(--hover);
+}
+.btn-primary:hover{
+    transition:ease-in-out 300ms;
+    background-color: var(--hover);
 }
 .btn-primary a{
     text-decoration:none;
@@ -121,6 +158,9 @@ header p {
     margin:auto;
     padding:20px;
 }
+.container-hasil .container-1 p{
+    text-align:center;
+}
 .container-2{
     text-align:justify;
     letter-spacing: 0.5px;
@@ -132,10 +172,16 @@ header p {
     gap:10px;
 }
 .container-2 .btn-group .btn-primary-2{
-    background-color:#2D76F6;
+    background-color:var(--blue);
     color:white;
     border-radius:5px;
     padding:10px;
+    border:none;
+}
+
+.container-2 .btn-group .btn-primary-2:hover{
+    transition:ease-in-out 300ms;
+    background-color: var(--hover);
 }
 
 .container-3, .container-1{
@@ -144,7 +190,7 @@ header p {
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    background-color:#dedede;
+    background-color:var(--bg);
     margin:auto;
     padding:10px;
     border-radius:10px;
@@ -172,6 +218,7 @@ header p {
     width:100%;
     gap:10px;
     height:30px;
+    margin-top:30x;
     margin-bottom:10px;
 }
 
